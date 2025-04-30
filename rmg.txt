@@ -1,1 +1,1 @@
-TEST	2	2	1	x				4	1	2	2	2		1				x	x	x	x	x				x	x								
+Test	2	2	1	x				4	1	2	2	2			1				x	x	x	x	x	x	x	x	x																x	x	x	x	x	x	x	x		Average		x	x	x	x	x	x	x	x	x	x										

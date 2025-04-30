@@ -44,7 +44,7 @@
                                                 <Font name="System Bold" size="12.0" />
                                             </font>
                                         </Label>
-                                        <TextField fx:id="id1" disable="true" layoutX="23.0" layoutY="11.0" prefHeight="25.0" prefWidth="227.0" text="1" />
+                                        <TextField fx:id="zoneID" disable="true" layoutX="23.0" layoutY="11.0" prefHeight="25.0" prefWidth="227.0" text="1" />
                                         <Label layoutX="7.0" layoutY="48.0" prefHeight="17.0" prefWidth="69.0" text="Zone Type*">
                                             <font>
                                                 <Font name="System Bold" size="12.0" />
@@ -165,44 +165,44 @@
                                                 <Font name="System Bold" size="12.0" />
                                             </font>
                                         </Label>
-                                        <TextField layoutX="154.0" layoutY="680.0" prefHeight="25.0" prefWidth="95.0" promptText="1-6" />
+                                        <TextField fx:id="woodDepositDensity" layoutX="154.0" layoutY="680.0" prefHeight="25.0" prefWidth="95.0" promptText="1-6" />
                                         <Label layoutX="7.0" layoutY="720.0" prefHeight="17.0" prefWidth="149.0" text="Mercury Deposit Density">
                                             <font>
                                                 <Font name="System Bold" size="12.0" />
                                             </font>
                                         </Label>
-                                        <TextField layoutX="154.0" layoutY="716.0" prefHeight="25.0" prefWidth="95.0" promptText="1-6" />
+                                        <TextField fx:id="mercuryDepositDensity" layoutX="154.0" layoutY="716.0" prefHeight="25.0" prefWidth="95.0" promptText="1-6" />
                                         <Label layoutX="333.0" layoutY="17.0" prefHeight="17.0" prefWidth="124.0" text="Ore Deposity Density">
                                             <font>
                                                 <Font name="System Bold" size="12.0" />
                                             </font>
                                         </Label>
-                                        <TextField layoutX="495.0" layoutY="16.0" prefHeight="25.0" prefWidth="101.0" promptText="1-6" />
+                                        <TextField fx:id="oreDepositDensity" layoutX="495.0" layoutY="16.0" prefHeight="25.0" prefWidth="101.0" promptText="1-6" />
                                         <Label layoutX="333.0" layoutY="48.0" prefHeight="17.0" prefWidth="136.0" text="Sulfur Deposit Density">
                                             <font>
                                                 <Font name="System Bold" size="12.0" />
                                             </font>
                                         </Label>
-                                        <TextField layoutX="495.0" layoutY="47.0" prefHeight="25.0" prefWidth="101.0" promptText="1-6" />
+                                        <TextField fx:id="sulfurDepositDensity" layoutX="495.0" layoutY="47.0" prefHeight="25.0" prefWidth="101.0" promptText="1-6" />
                                         <Label layoutX="333.0" layoutY="79.0" prefHeight="17.0" prefWidth="135.0" text="Crystal Deposit Density">
                                             <font>
                                                 <Font name="System Bold" size="12.0" />
                                             </font>
                                         </Label>
-                                        <TextField layoutX="495.0" layoutY="78.0" prefHeight="25.0" prefWidth="101.0" promptText="1-6" />
+                                        <TextField fx:id="crystalDepositDensity" layoutX="495.0" layoutY="78.0" prefHeight="25.0" prefWidth="101.0" promptText="1-6" />
                                         <Label layoutX="333.0" layoutY="111.0" prefHeight="17.0" prefWidth="124.0" text="Gem Deposit Density">
                                             <font>
                                                 <Font name="System Bold" size="12.0" />
                                             </font>
                                         </Label>
-                                        <TextField layoutX="495.0" layoutY="110.0" prefHeight="25.0" prefWidth="101.0" promptText="1-6" />
+                                        <TextField fx:id="gemDepositDensity" layoutX="495.0" layoutY="110.0" prefHeight="25.0" prefWidth="101.0" promptText="1-6" />
                                         <Label layoutX="333.0" layoutY="144.0" prefHeight="17.0" prefWidth="124.0" text="Gold Deposit Density">
                                             <font>
                                                 <Font name="System Bold" size="12.0" />
                                             </font>
                                         </Label>
-                                        <TextField layoutX="495.0" layoutY="143.0" prefHeight="25.0" prefWidth="101.0" promptText="1-6" />
-                                        <CheckBox layoutX="333.0" layoutY="176.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="258.0" text="Match resources to nearby town's needs?">
+                                        <TextField fx:id="goldDepositDensity" layoutX="495.0" layoutY="143.0" prefHeight="25.0" prefWidth="101.0" promptText="1-6" />
+                                        <CheckBox fx:id="matchResourcesToTown" layoutX="333.0" layoutY="176.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="258.0" text="Match resources to nearby town's needs?">
                                             <font>
                                                 <Font name="System Bold" size="12.0" />
                                             </font>
@@ -219,12 +219,12 @@
                                                 <CheckMenuItem mnemonicParsing="false" selected="true" text="Lava" />
                                             </items>
                                         </MenuButton>
-                                        <CheckBox layoutX="333.0" layoutY="240.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="258.0" text="Match terrain to town type?">
+                                        <CheckBox fx:id="matchTerrainToTown" layoutX="333.0" layoutY="240.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="258.0" text="Match terrain to town type?">
                                             <font>
                                                 <Font name="System Bold" size="12.0" />
                                             </font>
                                         </CheckBox>
-                                        <CheckBox layoutX="333.0" layoutY="303.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="258.0" text="Match monsters to town type?">
+                                        <CheckBox fx:id="matchMonstersToTown" layoutX="333.0" layoutY="303.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="258.0" text="Match monsters to town type?">
                                             <font>
                                                 <Font name="System Bold" size="12.0" />
                                             </font>
@@ -254,71 +254,613 @@
                                                 <Font name="System Bold" size="12.0" />
                                             </font>
                                         </Label>
-                                        <TextField layoutX="480.0" layoutY="373.0" prefHeight="25.0" prefWidth="108.0" promptText="10000-15000" />
+                                        <TextField fx:id="highValueTreasureGoldValueMin" layoutX="480.0" layoutY="373.0" prefHeight="25.0" prefWidth="108.0" promptText="10000-15000" />
                                         <Label layoutX="332.0" layoutY="409.0" prefHeight="38.0" prefWidth="121.0" text="High Value Treasure Gold Value Max" textAlignment="CENTER" wrapText="true">
                                             <font>
                                                 <Font name="System Bold" size="12.0" />
                                             </font>
                                         </Label>
-                                        <TextField layoutX="481.0" layoutY="416.0" prefHeight="25.0" prefWidth="107.0" promptText="10000-15000" />
+                                        <TextField fx:id="highValueTreasureGoldValueMax" layoutX="481.0" layoutY="416.0" prefHeight="25.0" prefWidth="107.0" promptText="10000-15000" />
                                         <Label layoutX="333.0" layoutY="500.0" prefHeight="38.0" prefWidth="136.0" text="Medium Value Treasure Gold Value Min" textAlignment="CENTER" wrapText="true">
                                             <font>
                                                 <Font name="System Bold" size="12.0" />
                                             </font>
                                         </Label>
-                                        <TextField layoutX="482.0" layoutY="507.0" prefHeight="25.0" prefWidth="108.0" promptText="3000-6000" />
+                                        <TextField fx:id="midValueTreasureGoldValueMin" layoutX="482.0" layoutY="507.0" prefHeight="25.0" prefWidth="108.0" promptText="3000-6000" />
                                         <Label layoutX="332.0" layoutY="543.0" prefHeight="38.0" prefWidth="140.0" text="Medium Value Treasure Gold Value Max" textAlignment="CENTER" wrapText="true">
                                             <font>
                                                 <Font name="System Bold" size="12.0" />
                                             </font>
                                         </Label>
-                                        <TextField layoutX="483.0" layoutY="550.0" prefHeight="25.0" prefWidth="109.0" promptText="6000-9000" />
+                                        <TextField fx:id="midValueTreasureGoldValueMax" layoutX="483.0" layoutY="550.0" prefHeight="25.0" prefWidth="109.0" promptText="6000-9000" />
                                         <Label layoutX="334.0" layoutY="457.0" prefHeight="38.0" prefWidth="117.0" text="High Value Treasure Relative Density" textAlignment="CENTER" wrapText="true">
                                             <font>
                                                 <Font name="System Bold" size="12.0" />
                                             </font>
                                         </Label>
-                                        <TextField layoutX="483.0" layoutY="464.0" prefHeight="25.0" prefWidth="107.0" promptText="1-10" />
+                                        <TextField fx:id="highValueTreasureDensity" layoutX="483.0" layoutY="464.0" prefHeight="25.0" prefWidth="107.0" promptText="1-10" />
                                         <Label layoutX="333.0" layoutY="586.0" prefHeight="38.0" prefWidth="141.0" text="Medium Value Treasure Relative Density" textAlignment="CENTER" wrapText="true">
                                             <font>
                                                 <Font name="System Bold" size="12.0" />
                                             </font>
                                         </Label>
-                                        <TextField layoutX="483.0" layoutY="593.0" prefHeight="25.0" prefWidth="107.0" promptText="1-10" />
+                                        <TextField fx:id="midValueTreasureDensity" layoutX="483.0" layoutY="593.0" prefHeight="25.0" prefWidth="107.0" promptText="1-10" />
                                         <Label layoutX="333.0" layoutY="630.0" prefHeight="38.0" prefWidth="120.0" text="Low Value Treasure Gold Value Min" textAlignment="CENTER" wrapText="true">
                                             <font>
                                                 <Font name="System Bold" size="12.0" />
                                             </font>
                                         </Label>
-                                        <TextField layoutX="482.0" layoutY="637.0" prefHeight="25.0" prefWidth="108.0" promptText="500-2000" />
+                                        <TextField fx:id="lowValueTreasureGoldValueMin" layoutX="482.0" layoutY="637.0" prefHeight="25.0" prefWidth="108.0" promptText="500-2000" />
                                         <Label layoutX="332.0" layoutY="673.0" prefHeight="38.0" prefWidth="120.0" text="Low Value Treasure Gold Value Max" textAlignment="CENTER" wrapText="true">
                                             <font>
                                                 <Font name="System Bold" size="12.0" />
                                             </font>
                                         </Label>
-                                        <TextField layoutX="483.0" layoutY="680.0" prefHeight="25.0" prefWidth="109.0" promptText="3000-5000" />
+                                        <TextField fx:id="lowValueTreasureGoldValueMax" layoutX="483.0" layoutY="680.0" prefHeight="25.0" prefWidth="109.0" promptText="3000-5000" />
                                         <Label layoutX="333.0" layoutY="716.0" prefHeight="38.0" prefWidth="120.0" text="Low Value Treasure Relative Density" textAlignment="CENTER" wrapText="true">
                                             <font>
                                                 <Font name="System Bold" size="12.0" />
                                             </font>
                                         </Label>
-                                        <TextField layoutX="483.0" layoutY="723.0" prefHeight="25.0" prefWidth="107.0" promptText="1-10" />
+                                        <TextField fx:id="lowValueTreasureDensity" layoutX="483.0" layoutY="723.0" prefHeight="25.0" prefWidth="107.0" promptText="1-10" />
                                     </children>
                                 </Pane>
                             </children>
                         </AnchorPane>
                     </content>
                 </Tab>
-                <Tab text="Zone 2">
-                    <content>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                    </content>
-                </Tab>
-                <Tab text="Zone 3">
-                    <content>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                    </content>
-                </Tab>
+            <Tab text="Zone 2">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="773.0" prefWidth="622.0">
+                     <children>
+                        <Pane layoutY="-2.0" prefHeight="764.0" prefWidth="622.0">
+                           <children>
+                              <Label layoutX="7.0" layoutY="15.0" prefHeight="17.0" prefWidth="15.0" text="ID">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="zoneID1" disable="true" layoutX="23.0" layoutY="11.0" prefHeight="25.0" prefWidth="227.0" text="2" />
+                              <Label layoutX="7.0" layoutY="48.0" prefHeight="17.0" prefWidth="69.0" text="Zone Type*">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <ChoiceBox fx:id="zoneType1" layoutX="81.0" layoutY="44.0" prefHeight="25.0" prefWidth="170.0" />
+                              <Label layoutX="7.0" layoutY="78.0" prefHeight="17.0" prefWidth="62.0" text="Zone Size*">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="zoneSize1" layoutX="81.0" layoutY="74.0" prefHeight="25.0" prefWidth="170.0" promptText="4-20" />
+                              <Label layoutX="7.0" layoutY="109.0" prefHeight="17.0" prefWidth="127.0" text="Min Human Positions*">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="humanPositionsMin1" layoutX="143.0" layoutY="105.0" prefHeight="25.0" prefWidth="106.0" promptText="1-8" />
+                              <Label layoutX="7.0" layoutY="141.0" prefHeight="17.0" prefWidth="134.0" text="Max Human Positions*">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="humanPositionsMax1" layoutX="143.0" layoutY="137.0" prefHeight="25.0" prefWidth="107.0" promptText="2-8" />
+                              <Label layoutX="7.0" layoutY="172.0" prefHeight="17.0" prefWidth="115.0" text="Min Total Positions*">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="totalPositionsMin1" layoutX="129.0" layoutY="168.0" prefHeight="25.0" prefWidth="121.0" promptText="2-8" />
+                              <Label layoutX="7.0" layoutY="204.0" prefHeight="17.0" prefWidth="122.0" text="Max Total Positions*">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="totalPositionsMax1" layoutX="130.0" layoutY="200.0" prefHeight="25.0" prefWidth="120.0" promptText="2-8" />
+                              <Label layoutX="7.0" layoutY="237.0" prefHeight="17.0" prefWidth="84.0" text="Zone Owner*?">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="zoneOwner1" layoutX="94.0" layoutY="233.0" prefHeight="25.0" prefWidth="155.0" promptText="1-8 (player color)" />
+                              <Label layoutX="7.0" layoutY="269.0" prefHeight="17.0" prefWidth="69.0" text="Min Towns">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="townsInZoneMin1" layoutX="94.0" layoutY="265.0" prefHeight="25.0" prefWidth="156.0" promptText="1-6" />
+                              <Label layoutX="7.0" layoutY="301.0" prefHeight="17.0" prefWidth="77.0" text="Min Castles*?">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="castlesInZoneMin1" layoutX="93.0" layoutY="297.0" prefHeight="25.0" prefWidth="157.0" promptText="1-6" />
+                              <Label layoutX="7.0" layoutY="334.0" prefHeight="17.0" prefWidth="80.0" text="Town Density">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="townDensity1" layoutX="92.0" layoutY="330.0" prefHeight="25.0" prefWidth="159.0" promptText="1-4" />
+                              <Label layoutX="7.0" layoutY="364.0" prefHeight="17.0" prefWidth="80.0" text="Castle Density">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="castleDensity1" layoutX="92.0" layoutY="360.0" prefHeight="25.0" prefWidth="159.0" promptText="1-4" />
+                              <CheckBox fx:id="townsSameType1" layoutX="7.0" layoutY="392.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="242.0" text="Are all towns the same type?">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </CheckBox>
+                              <MenuButton fx:id="townTypesInZone1" layoutX="7.0" layoutY="420.0" mnemonicParsing="false" text="Town Types in Zone" />
+                              <Label layoutX="7.0" layoutY="456.0" prefHeight="17.0" prefWidth="124.0" text="Lumber Mill Quantity">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="lumberMillQuantity1" layoutX="149.0" layoutY="452.0" prefHeight="25.0" prefWidth="101.0" promptText="1-6" />
+                              <Label layoutX="7.0" layoutY="489.0" prefHeight="17.0" prefWidth="133.0" text="Mercury Mine Quantity">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="mercuryMineQuantity1" layoutX="149.0" layoutY="485.0" prefHeight="25.0" prefWidth="102.0" promptText="1-6" />
+                              <Label layoutX="6.0" layoutY="520.0" prefHeight="17.0" prefWidth="124.0" text="Ore Mine Quantity">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="oreMineQuantity1" layoutX="149.0" layoutY="516.0" prefHeight="25.0" prefWidth="101.0" promptText="1-6" />
+                              <Label layoutX="6.0" layoutY="551.0" prefHeight="17.0" prefWidth="124.0" text="Sulfur Mine Quantity">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="sulfurMineQuantity1" layoutX="149.0" layoutY="547.0" prefHeight="25.0" prefWidth="101.0" promptText="1-6" />
+                              <Label layoutX="6.0" layoutY="582.0" prefHeight="17.0" prefWidth="124.0" text="Crystal Mine Quantity">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="crystalMineQuantity1" layoutX="149.0" layoutY="578.0" prefHeight="25.0" prefWidth="101.0" promptText="1-6" />
+                              <Label layoutX="6.0" layoutY="614.0" prefHeight="17.0" prefWidth="124.0" text="Gem Pond Quantity">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="gemPondQuantity1" layoutX="149.0" layoutY="610.0" prefHeight="25.0" prefWidth="101.0" promptText="1-6" />
+                              <Label layoutX="6.0" layoutY="647.0" prefHeight="17.0" prefWidth="124.0" text="Gold Mine Quantity">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="goldMineQuantity1" layoutX="149.0" layoutY="643.0" prefHeight="25.0" prefWidth="101.0" promptText="1-6" />
+                              <Separator layoutX="265.0" layoutY="10.0" orientation="VERTICAL" prefHeight="751.0" prefWidth="55.0" />
+                              <Label layoutX="8.0" layoutY="684.0" prefHeight="17.0" prefWidth="138.0" text="Wood Desposit Density">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="woodDepositDensity1" layoutX="154.0" layoutY="680.0" prefHeight="25.0" prefWidth="95.0" promptText="1-6" />
+                              <Label layoutX="7.0" layoutY="720.0" prefHeight="17.0" prefWidth="149.0" text="Mercury Deposit Density">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="mercuryDepositDensity1" layoutX="154.0" layoutY="716.0" prefHeight="25.0" prefWidth="95.0" promptText="1-6" />
+                              <Label layoutX="333.0" layoutY="17.0" prefHeight="17.0" prefWidth="124.0" text="Ore Deposity Density">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="oreDepositDensity1" layoutX="495.0" layoutY="16.0" prefHeight="25.0" prefWidth="101.0" promptText="1-6" />
+                              <Label layoutX="333.0" layoutY="48.0" prefHeight="17.0" prefWidth="136.0" text="Sulfur Deposit Density">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="sulfurDepositDensity1" layoutX="495.0" layoutY="47.0" prefHeight="25.0" prefWidth="101.0" promptText="1-6" />
+                              <Label layoutX="333.0" layoutY="79.0" prefHeight="17.0" prefWidth="135.0" text="Crystal Deposit Density">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="crystalDepositDensity1" layoutX="495.0" layoutY="78.0" prefHeight="25.0" prefWidth="101.0" promptText="1-6" />
+                              <Label layoutX="333.0" layoutY="111.0" prefHeight="17.0" prefWidth="124.0" text="Gem Deposit Density">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="gemDepositDensity1" layoutX="495.0" layoutY="110.0" prefHeight="25.0" prefWidth="101.0" promptText="1-6" />
+                              <Label layoutX="333.0" layoutY="144.0" prefHeight="17.0" prefWidth="124.0" text="Gold Deposit Density">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="goldDepositDensity1" layoutX="495.0" layoutY="143.0" prefHeight="25.0" prefWidth="101.0" promptText="1-6" />
+                              <CheckBox fx:id="matchResourcesToTown1" layoutX="333.0" layoutY="176.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="258.0" text="Match resources to nearby town's needs?">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </CheckBox>
+                              <MenuButton fx:id="terrainTypesInZone1" layoutX="332.0" layoutY="204.0" mnemonicParsing="false" text="Terrain Types in Zone">
+                                 <items>
+                                    <CheckMenuItem mnemonicParsing="false" selected="true" text="Dirt" />
+                                    <CheckMenuItem mnemonicParsing="false" selected="true" text="Sand" />
+                                    <CheckMenuItem mnemonicParsing="false" selected="true" text="Grass" />
+                                    <CheckMenuItem mnemonicParsing="false" selected="true" text="Snow" />
+                                    <CheckMenuItem mnemonicParsing="false" selected="true" text="Swamp" />
+                                    <CheckMenuItem mnemonicParsing="false" selected="true" text="Rough" />
+                                    <CheckMenuItem mnemonicParsing="false" selected="true" text="Cave" />
+                                    <CheckMenuItem mnemonicParsing="false" selected="true" text="Lava" />
+                                 </items>
+                              </MenuButton>
+                              <CheckBox fx:id="matchTerrainToTown1" layoutX="333.0" layoutY="240.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="258.0" text="Match terrain to town type?">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </CheckBox>
+                              <CheckBox fx:id="matchMonstersToTown1" layoutX="333.0" layoutY="303.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="258.0" text="Match monsters to town type?">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </CheckBox>
+                              <MenuButton fx:id="monsterTypesInZone1" layoutX="332.0" layoutY="327.0" mnemonicParsing="false" text="Monster Types in Zone">
+                                 <items>
+                                    <CheckMenuItem mnemonicParsing="false" selected="true" text="Neutral" />
+                                    <CheckMenuItem mnemonicParsing="false" selected="true" text="Castle" />
+                                    <CheckMenuItem mnemonicParsing="false" selected="true" text="Rampart" />
+                                    <CheckMenuItem mnemonicParsing="false" selected="true" text="Tower" />
+                                    <CheckMenuItem mnemonicParsing="false" selected="true" text="Inferno" />
+                                    <CheckMenuItem mnemonicParsing="false" selected="true" text="Necropolis" />
+                                    <CheckMenuItem mnemonicParsing="false" selected="true" text="Dungeon" />
+                                    <CheckMenuItem mnemonicParsing="false" selected="true" text="Stronghold" />
+                                    <CheckMenuItem mnemonicParsing="false" selected="true" text="Fortress" />
+                                    <CheckMenuItem mnemonicParsing="false" selected="true" text="Conflux" />
+                                 </items>
+                              </MenuButton>
+                              <ChoiceBox fx:id="monsterStrength1" layoutX="441.0" layoutY="269.0" prefHeight="25.0" prefWidth="156.0" />
+                              <Label layoutX="334.0" layoutY="273.0" prefHeight="17.0" prefWidth="104.0" text="Monster Strength">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="333.0" layoutY="366.0" prefHeight="38.0" prefWidth="121.0" text="High Value Treasure Gold Value Min" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="highValueTreasureGoldValueMin1" layoutX="480.0" layoutY="373.0" prefHeight="25.0" prefWidth="108.0" promptText="10000-15000" />
+                              <Label layoutX="332.0" layoutY="409.0" prefHeight="38.0" prefWidth="121.0" text="High Value Treasure Gold Value Max" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="highValueTreasureGoldValueMax1" layoutX="481.0" layoutY="416.0" prefHeight="25.0" prefWidth="107.0" promptText="10000-15000" />
+                              <Label layoutX="333.0" layoutY="500.0" prefHeight="38.0" prefWidth="136.0" text="Medium Value Treasure Gold Value Min" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="midValueTreasureGoldValueMin1" layoutX="482.0" layoutY="507.0" prefHeight="25.0" prefWidth="108.0" promptText="3000-6000" />
+                              <Label layoutX="332.0" layoutY="543.0" prefHeight="38.0" prefWidth="140.0" text="Medium Value Treasure Gold Value Max" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="midValueTreasureGoldValueMax1" layoutX="483.0" layoutY="550.0" prefHeight="25.0" prefWidth="109.0" promptText="6000-9000" />
+                              <Label layoutX="334.0" layoutY="457.0" prefHeight="38.0" prefWidth="117.0" text="High Value Treasure Relative Density" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="highValueTreasureDensity1" layoutX="483.0" layoutY="464.0" prefHeight="25.0" prefWidth="107.0" promptText="1-10" />
+                              <Label layoutX="333.0" layoutY="586.0" prefHeight="38.0" prefWidth="141.0" text="Medium Value Treasure Relative Density" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="midValueTreasureDensity1" layoutX="483.0" layoutY="593.0" prefHeight="25.0" prefWidth="107.0" promptText="1-10" />
+                              <Label layoutX="333.0" layoutY="630.0" prefHeight="38.0" prefWidth="120.0" text="Low Value Treasure Gold Value Min" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="lowValueTreasureGoldValueMin1" layoutX="482.0" layoutY="637.0" prefHeight="25.0" prefWidth="108.0" promptText="500-2000" />
+                              <Label layoutX="332.0" layoutY="673.0" prefHeight="38.0" prefWidth="120.0" text="Low Value Treasure Gold Value Max" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="lowValueTreasureGoldValueMax1" layoutX="483.0" layoutY="680.0" prefHeight="25.0" prefWidth="109.0" promptText="3000-5000" />
+                              <Label layoutX="333.0" layoutY="716.0" prefHeight="38.0" prefWidth="120.0" text="Low Value Treasure Relative Density" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="lowValueTreasureDensity1" layoutX="483.0" layoutY="723.0" prefHeight="25.0" prefWidth="107.0" promptText="1-10" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Zone 3">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="773.0" prefWidth="622.0">
+                     <children>
+                        <Pane layoutY="-2.0" prefHeight="764.0" prefWidth="622.0">
+                           <children>
+                              <Label layoutX="7.0" layoutY="15.0" prefHeight="17.0" prefWidth="15.0" text="ID">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="zoneID11" disable="true" layoutX="23.0" layoutY="11.0" prefHeight="25.0" prefWidth="227.0" text="3" />
+                              <Label layoutX="7.0" layoutY="48.0" prefHeight="17.0" prefWidth="69.0" text="Zone Type*">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <ChoiceBox fx:id="zoneType11" layoutX="81.0" layoutY="44.0" prefHeight="25.0" prefWidth="170.0" />
+                              <Label layoutX="7.0" layoutY="78.0" prefHeight="17.0" prefWidth="62.0" text="Zone Size*">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="zoneSize11" layoutX="81.0" layoutY="74.0" prefHeight="25.0" prefWidth="170.0" promptText="4-20" />
+                              <Label layoutX="7.0" layoutY="109.0" prefHeight="17.0" prefWidth="127.0" text="Min Human Positions*">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="humanPositionsMin11" layoutX="143.0" layoutY="105.0" prefHeight="25.0" prefWidth="106.0" promptText="1-8" />
+                              <Label layoutX="7.0" layoutY="141.0" prefHeight="17.0" prefWidth="134.0" text="Max Human Positions*">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="humanPositionsMax11" layoutX="143.0" layoutY="137.0" prefHeight="25.0" prefWidth="107.0" promptText="2-8" />
+                              <Label layoutX="7.0" layoutY="172.0" prefHeight="17.0" prefWidth="115.0" text="Min Total Positions*">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="totalPositionsMin11" layoutX="129.0" layoutY="168.0" prefHeight="25.0" prefWidth="121.0" promptText="2-8" />
+                              <Label layoutX="7.0" layoutY="204.0" prefHeight="17.0" prefWidth="122.0" text="Max Total Positions*">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="totalPositionsMax11" layoutX="130.0" layoutY="200.0" prefHeight="25.0" prefWidth="120.0" promptText="2-8" />
+                              <Label layoutX="7.0" layoutY="237.0" prefHeight="17.0" prefWidth="84.0" text="Zone Owner*?">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="zoneOwner11" layoutX="94.0" layoutY="233.0" prefHeight="25.0" prefWidth="155.0" promptText="1-8 (player color)" />
+                              <Label layoutX="7.0" layoutY="269.0" prefHeight="17.0" prefWidth="69.0" text="Min Towns">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="townsInZoneMin11" layoutX="94.0" layoutY="265.0" prefHeight="25.0" prefWidth="156.0" promptText="1-6" />
+                              <Label layoutX="7.0" layoutY="301.0" prefHeight="17.0" prefWidth="77.0" text="Min Castles*?">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="castlesInZoneMin11" layoutX="93.0" layoutY="297.0" prefHeight="25.0" prefWidth="157.0" promptText="1-6" />
+                              <Label layoutX="7.0" layoutY="334.0" prefHeight="17.0" prefWidth="80.0" text="Town Density">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="townDensity11" layoutX="92.0" layoutY="330.0" prefHeight="25.0" prefWidth="159.0" promptText="1-4" />
+                              <Label layoutX="7.0" layoutY="364.0" prefHeight="17.0" prefWidth="80.0" text="Castle Density">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="castleDensity11" layoutX="92.0" layoutY="360.0" prefHeight="25.0" prefWidth="159.0" promptText="1-4" />
+                              <CheckBox fx:id="townsSameType11" layoutX="7.0" layoutY="392.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="242.0" text="Are all towns the same type?">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </CheckBox>
+                              <MenuButton fx:id="townTypesInZone11" layoutX="7.0" layoutY="420.0" mnemonicParsing="false" text="Town Types in Zone" />
+                              <Label layoutX="7.0" layoutY="456.0" prefHeight="17.0" prefWidth="124.0" text="Lumber Mill Quantity">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="lumberMillQuantity11" layoutX="149.0" layoutY="452.0" prefHeight="25.0" prefWidth="101.0" promptText="1-6" />
+                              <Label layoutX="7.0" layoutY="489.0" prefHeight="17.0" prefWidth="133.0" text="Mercury Mine Quantity">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="mercuryMineQuantity11" layoutX="149.0" layoutY="485.0" prefHeight="25.0" prefWidth="102.0" promptText="1-6" />
+                              <Label layoutX="6.0" layoutY="520.0" prefHeight="17.0" prefWidth="124.0" text="Ore Mine Quantity">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="oreMineQuantity11" layoutX="149.0" layoutY="516.0" prefHeight="25.0" prefWidth="101.0" promptText="1-6" />
+                              <Label layoutX="6.0" layoutY="551.0" prefHeight="17.0" prefWidth="124.0" text="Sulfur Mine Quantity">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="sulfurMineQuantity11" layoutX="149.0" layoutY="547.0" prefHeight="25.0" prefWidth="101.0" promptText="1-6" />
+                              <Label layoutX="6.0" layoutY="582.0" prefHeight="17.0" prefWidth="124.0" text="Crystal Mine Quantity">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="crystalMineQuantity11" layoutX="149.0" layoutY="578.0" prefHeight="25.0" prefWidth="101.0" promptText="1-6" />
+                              <Label layoutX="6.0" layoutY="614.0" prefHeight="17.0" prefWidth="124.0" text="Gem Pond Quantity">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="gemPondQuantity11" layoutX="149.0" layoutY="610.0" prefHeight="25.0" prefWidth="101.0" promptText="1-6" />
+                              <Label layoutX="6.0" layoutY="647.0" prefHeight="17.0" prefWidth="124.0" text="Gold Mine Quantity">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="goldMineQuantity11" layoutX="149.0" layoutY="643.0" prefHeight="25.0" prefWidth="101.0" promptText="1-6" />
+                              <Separator layoutX="265.0" layoutY="10.0" orientation="VERTICAL" prefHeight="751.0" prefWidth="55.0" />
+                              <Label layoutX="8.0" layoutY="684.0" prefHeight="17.0" prefWidth="138.0" text="Wood Desposit Density">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="woodDepositDensity11" layoutX="154.0" layoutY="680.0" prefHeight="25.0" prefWidth="95.0" promptText="1-6" />
+                              <Label layoutX="7.0" layoutY="720.0" prefHeight="17.0" prefWidth="149.0" text="Mercury Deposit Density">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="mercuryDepositDensity11" layoutX="154.0" layoutY="716.0" prefHeight="25.0" prefWidth="95.0" promptText="1-6" />
+                              <Label layoutX="333.0" layoutY="17.0" prefHeight="17.0" prefWidth="124.0" text="Ore Deposity Density">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="oreDepositDensity11" layoutX="495.0" layoutY="16.0" prefHeight="25.0" prefWidth="101.0" promptText="1-6" />
+                              <Label layoutX="333.0" layoutY="48.0" prefHeight="17.0" prefWidth="136.0" text="Sulfur Deposit Density">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="sulfurDepositDensity11" layoutX="495.0" layoutY="47.0" prefHeight="25.0" prefWidth="101.0" promptText="1-6" />
+                              <Label layoutX="333.0" layoutY="79.0" prefHeight="17.0" prefWidth="135.0" text="Crystal Deposit Density">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="crystalDepositDensity11" layoutX="495.0" layoutY="78.0" prefHeight="25.0" prefWidth="101.0" promptText="1-6" />
+                              <Label layoutX="333.0" layoutY="111.0" prefHeight="17.0" prefWidth="124.0" text="Gem Deposit Density">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="gemDepositDensity11" layoutX="495.0" layoutY="110.0" prefHeight="25.0" prefWidth="101.0" promptText="1-6" />
+                              <Label layoutX="333.0" layoutY="144.0" prefHeight="17.0" prefWidth="124.0" text="Gold Deposit Density">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="goldDepositDensity11" layoutX="495.0" layoutY="143.0" prefHeight="25.0" prefWidth="101.0" promptText="1-6" />
+                              <CheckBox fx:id="matchResourcesToTown11" layoutX="333.0" layoutY="176.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="258.0" text="Match resources to nearby town's needs?">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </CheckBox>
+                              <MenuButton fx:id="terrainTypesInZone11" layoutX="332.0" layoutY="204.0" mnemonicParsing="false" text="Terrain Types in Zone">
+                                 <items>
+                                    <CheckMenuItem mnemonicParsing="false" selected="true" text="Dirt" />
+                                    <CheckMenuItem mnemonicParsing="false" selected="true" text="Sand" />
+                                    <CheckMenuItem mnemonicParsing="false" selected="true" text="Grass" />
+                                    <CheckMenuItem mnemonicParsing="false" selected="true" text="Snow" />
+                                    <CheckMenuItem mnemonicParsing="false" selected="true" text="Swamp" />
+                                    <CheckMenuItem mnemonicParsing="false" selected="true" text="Rough" />
+                                    <CheckMenuItem mnemonicParsing="false" selected="true" text="Cave" />
+                                    <CheckMenuItem mnemonicParsing="false" selected="true" text="Lava" />
+                                 </items>
+                              </MenuButton>
+                              <CheckBox fx:id="matchTerrainToTown11" layoutX="333.0" layoutY="240.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="258.0" text="Match terrain to town type?">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </CheckBox>
+                              <CheckBox fx:id="matchMonstersToTown11" layoutX="333.0" layoutY="303.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="258.0" text="Match monsters to town type?">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </CheckBox>
+                              <MenuButton fx:id="monsterTypesInZone11" layoutX="332.0" layoutY="327.0" mnemonicParsing="false" text="Monster Types in Zone">
+                                 <items>
+                                    <CheckMenuItem mnemonicParsing="false" selected="true" text="Neutral" />
+                                    <CheckMenuItem mnemonicParsing="false" selected="true" text="Castle" />
+                                    <CheckMenuItem mnemonicParsing="false" selected="true" text="Rampart" />
+                                    <CheckMenuItem mnemonicParsing="false" selected="true" text="Tower" />
+                                    <CheckMenuItem mnemonicParsing="false" selected="true" text="Inferno" />
+                                    <CheckMenuItem mnemonicParsing="false" selected="true" text="Necropolis" />
+                                    <CheckMenuItem mnemonicParsing="false" selected="true" text="Dungeon" />
+                                    <CheckMenuItem mnemonicParsing="false" selected="true" text="Stronghold" />
+                                    <CheckMenuItem mnemonicParsing="false" selected="true" text="Fortress" />
+                                    <CheckMenuItem mnemonicParsing="false" selected="true" text="Conflux" />
+                                 </items>
+                              </MenuButton>
+                              <ChoiceBox fx:id="monsterStrength11" layoutX="441.0" layoutY="269.0" prefHeight="25.0" prefWidth="156.0" />
+                              <Label layoutX="334.0" layoutY="273.0" prefHeight="17.0" prefWidth="104.0" text="Monster Strength">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="333.0" layoutY="366.0" prefHeight="38.0" prefWidth="121.0" text="High Value Treasure Gold Value Min" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="highValueTreasureGoldValueMin11" layoutX="480.0" layoutY="373.0" prefHeight="25.0" prefWidth="108.0" promptText="10000-15000" />
+                              <Label layoutX="332.0" layoutY="409.0" prefHeight="38.0" prefWidth="121.0" text="High Value Treasure Gold Value Max" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="highValueTreasureGoldValueMax11" layoutX="481.0" layoutY="416.0" prefHeight="25.0" prefWidth="107.0" promptText="10000-15000" />
+                              <Label layoutX="333.0" layoutY="500.0" prefHeight="38.0" prefWidth="136.0" text="Medium Value Treasure Gold Value Min" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="midValueTreasureGoldValueMin11" layoutX="482.0" layoutY="507.0" prefHeight="25.0" prefWidth="108.0" promptText="3000-6000" />
+                              <Label layoutX="332.0" layoutY="543.0" prefHeight="38.0" prefWidth="140.0" text="Medium Value Treasure Gold Value Max" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="midValueTreasureGoldValueMax11" layoutX="483.0" layoutY="550.0" prefHeight="25.0" prefWidth="109.0" promptText="6000-9000" />
+                              <Label layoutX="334.0" layoutY="457.0" prefHeight="38.0" prefWidth="117.0" text="High Value Treasure Relative Density" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="highValueTreasureDensity11" layoutX="483.0" layoutY="464.0" prefHeight="25.0" prefWidth="107.0" promptText="1-10" />
+                              <Label layoutX="333.0" layoutY="586.0" prefHeight="38.0" prefWidth="141.0" text="Medium Value Treasure Relative Density" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="midValueTreasureDensity11" layoutX="483.0" layoutY="593.0" prefHeight="25.0" prefWidth="107.0" promptText="1-10" />
+                              <Label layoutX="333.0" layoutY="630.0" prefHeight="38.0" prefWidth="120.0" text="Low Value Treasure Gold Value Min" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="lowValueTreasureGoldValueMin11" layoutX="482.0" layoutY="637.0" prefHeight="25.0" prefWidth="108.0" promptText="500-2000" />
+                              <Label layoutX="332.0" layoutY="673.0" prefHeight="38.0" prefWidth="120.0" text="Low Value Treasure Gold Value Max" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="lowValueTreasureGoldValueMax11" layoutX="483.0" layoutY="680.0" prefHeight="25.0" prefWidth="109.0" promptText="3000-5000" />
+                              <Label layoutX="333.0" layoutY="716.0" prefHeight="38.0" prefWidth="120.0" text="Low Value Treasure Relative Density" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="lowValueTreasureDensity11" layoutX="483.0" layoutY="723.0" prefHeight="25.0" prefWidth="107.0" promptText="1-10" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
             </tabs>
         </TabPane>
         <TabPane layoutX="741.0" layoutY="225.0" prefHeight="423.0" prefWidth="258.0" tabClosingPolicy="UNAVAILABLE">
@@ -420,6 +962,6 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <Label fx:id="errorMessage" alignment="TOP_CENTER" contentDisplay="TOP" layoutX="742.0" layoutY="131.0" prefHeight="46.0" prefWidth="258.0" textAlignment="CENTER" textFill="RED" textOverrun="CLIP" wrapText="true" />
+      <Label fx:id="errorMessage" alignment="TOP_CENTER" contentDisplay="TOP" layoutX="742.0" layoutY="131.0" prefHeight="57.0" prefWidth="258.0" textAlignment="CENTER" textFill="RED" textOverrun="CLIP" wrapText="true" />
     </children>
 </AnchorPane>
